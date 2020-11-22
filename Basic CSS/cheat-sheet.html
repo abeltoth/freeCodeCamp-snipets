@@ -1,0 +1,46 @@
+<!-- Import Lobster google font -->
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+<h2 style="color: red;">CatPhotoApp</h2>
+<h2 id="cat-photo-app"></h2>
+
+<!-- sooner declared < later declared -->
+<!-- class < id < inline < important -->
+
+<!-- absolute untis: px, mm, in -->
+<!-- relative units: rem, em -->
+
+<!-- child element inherits parents properies -->
+
+<style>
+    h2 {
+        color: blue;
+        font-size: 30px;
+        font-family: Lobster, sans-serif;
+        width: 500px;
+        border-color: red;
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 10px;
+        background-color: silver;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .red-text {
+        color: red;
+    }
+
+    [type='checkbox'] {
+        margin: 10px 0px 15px 0px;
+    }
+
+    /* CSS variables */
+    :root {
+        --penguin-skin: gray;
+    }
+    .penguin-bottom {
+        background: var(--penguin-skin, black);
+    }
+
+</style>
