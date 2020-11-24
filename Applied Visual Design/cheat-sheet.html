@@ -1,0 +1,99 @@
+<style>
+    .text-align {
+        text-align: justify; /* stretch the text except the last line */
+        text-align: center; /* centers the text */
+        text-align: right; /* right-aligns the text */
+        text-align: left; /* default value */
+    }
+    .rgba {
+        background-color: rgba(45, 45, 45, 0.1); /* a for alpha 0-1 sets the opacity */
+    }
+    .hsl {
+        /* hue(0-360 around a spectum, this desides the color),saturity(ammount of gray), light(ammount of black and white) */
+        background-color: hsl(120, 100%, 50%); 
+    }
+    .linear-gradient {
+        background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255)); /* Transition between multiple colors */
+    }
+    .repeating-linear-gradient {
+        background: repeating-linear-gradient(45deg, yellow 0px, red 40px, blue 40px, black 80px);
+    }
+    .background-url {
+        background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+    }
+    .transform {
+        transform: scale(2); /* Makes the element n times larger */
+        transform: skewX(-32deg); /* skew(ferdít) the element among the given axis */
+        transform: rotate(-45deg);
+    }
+    /* offset-x (how far to push the shadow horizontally from the element), */
+    /* offset-y (how far to push the shadow vertically from the element), */
+    /* blur-radius (optional, makes larger and lighter shadow), */
+    /* spread-radius (optional, makes larger shadow) */
+    /* color */
+    .box-shadow {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    .opacity {
+        opacity: 0.5; /* half way to fully visible */
+    }
+    .text-transform {
+        text-transform: capitalize;
+        text-transform: lowercase;
+        text-transform: uppercase;
+        text-transform: inital; /* default value */
+        text-transform: inherit; /* inherit from parent element */
+        text-transform: none; /* original text */
+    }
+    .line-height {
+        line-height: 25px; /* Sets the horizontal space between lines if 0 the lines covers each other */
+    }
+    .hover:hover {
+        color: red; /* On hover event sets the color to red */
+    }
+    .before::before { /* ::after */
+        content: ""; /* It is neccessary */
+        background-color: yellow;
+        }
+    .position {
+        top: 10px; /* This called offset */
+        position: relative; /* Defines distance relative from the element's current position (in normal flow) */
+        position: absolute; /* Defines distance relative from the element's closest (relative) positioned parent (out of normal flow) */
+        position: fixed; /* Locks an element relative to the browser window (out of normal flow)*/
+        position: sticky; /* Positioned relative until a given offset position is met in the viewport then it "sticks" in place (out of normal flow)*/
+    }
+    .float {
+        float: left; /* Remove element from the normal flow, move them to the side of the parent. Used with width property */
+    }
+    .z-index {
+        z-index: 10;
+    }
+    /* CSS animation */
+    #anim:hover { /* ::before and ::after animated too */
+        animation-name: colorful;
+        animation-duration: 3s;
+        animation-fill-mode: forwards; /* The element stayes the same state after it changed */
+        animation-iteration-count: infinite; /* How many times should it repeated? */
+        animation-timing-function: ease; /* fast, slow, fast */
+        animation-timing-function: ease-in; /* slow, fast */
+        animation-timing-function: ease-out; /* fast, slow */
+        animation-timing-function: linear;
+        animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75); /* on 1 - 1 grid x1 y1 x2 y2 this two points (with 0,0 and 1,1 4 points) sets a line and that is the speed */
+    }
+    @keyframes colorful {
+        0% {
+            background-color: blue;
+        }
+        100% {
+            background-color: yellow;
+        }
+    }
+</style>
+
+<!-- strong adds font-weight:bold; -->
+<!-- u adds text-decoration: underline; -->
+<!-- em adds font-style: italic; -->
+<!-- s adds text-decoration: line-through; -->
+<p><em><s>Google</s> was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+
+<hr> <!-- adds a horizontal line -->
