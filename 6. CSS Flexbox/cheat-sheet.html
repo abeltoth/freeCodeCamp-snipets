@@ -1,0 +1,28 @@
+<style>
+    .flex-container {
+        display: flex; /* Element becomes a flex container -> easier align children */
+        flex-direction: row; /* Flow direction */
+        justify-content: center; /* Align children to the center of the flex container*/
+        justify-content: flex-start; /* Align children to the start of the flex container */
+        justify-content: flex-end; /* Align children to the end of the flex container */
+        justify-content: space-between; /* Align children to the start and end and the middle with equal spaces between them */
+        justify-content: space-around; /* Same as above, but the first and last item wont be at the edges (it will be at 1/2 space distance) */
+        justify-content: space-evenly; /* Same as above but the edges will be at full distance from the edges */
+        align-items: baseline; /* Align on the cross axis (This aligns to the baseline) */
+        align-items: flex-start; /* Align on the cross axis (This aligns to the start of the container) */
+        align-items: flex-end; /* Align on the cross axis (This aligns to the end of the container) */
+        align-items: center; /* Align on the cross axis (This aligns to the center of the container) */
+        align-items: stretch; /*Stretch the items to fill the flex container (This aligns to the center of the container) */
+        flex-wrap: wrap; /* Split a flex item into multiple lines, if the items are too big */
+        flex-wrap: nowrap; /* If the items are too big, they will be shrinked to fit the container (default) */
+    }
+
+    .flex-item {
+        flex-shrink: 2; /* Elements shrinked if their sum size is larger than the containers. 2 is the shrink ratio compared to other items */
+        flex-grow: 3; /* Opposite of above */
+        flex-basis: 10px; /* Inital size of the items */
+        flex: 2 2 150px; /* Flex grow, shrink, basis together */
+        order: 2; /* Order of the items */
+        align-self: baseline; /* Align on the cross axis only the selected element. Overrides parent's align items */
+    }
+</style>
