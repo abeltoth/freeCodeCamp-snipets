@@ -1,0 +1,66 @@
+<img src="" alt=""> <!-- Alt is for search engines and screen readers -->
+
+<h1> - <h6> <!-- 1 and only 1 h1/page to show the main content, 1-6 should dispalyed in order
+            After every h tag the content should be corresponding (h1 main h2 second important..etc) -->
+
+<main></main> <!-- Around the main content of the page, exclude links, banners -->
+
+<header></header><!-- Navigation links, introduction, multi page information -->
+
+<footer></footer><!-- copyright information, bottom links, bottom content -->
+
+<nav></nav><!-- Around main navigation links, other like footer links not needed to cover-->
+
+<!-- If a book is the article, then each chapter is a section. -->
+<article></article> <!-- For independent, self-contained content -->
+
+<section></section> <!-- For grouping thematically related content -->
+
+<!-- Around sound or audio content, needs some text near for deaf people -->
+<audio id="meowClip" controls> <!-- controls: show audio controls like play, pause, next -->
+    <source src="audio/meow.mp3" type="audio/mpeg" />
+    <source src="audio/meow.ogg" type="audio/ogg" />
+</audio>
+
+<figure> <!-- Used for graphs, chars, images -->
+    <!-- Here is a graps which is not visible due to some errors -->
+    <br>
+    <figcaption><!-- Explains the figure for accessibility tools -->
+        Breakdown per week of time to spend training in stealth, combat, and weapons.
+    </figcaption>
+</figure>
+
+<form><!-- label's for should be equal with input id in this case -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+</form>
+
+<form>
+    <fieldset><!-- Fieldset is for grouping radio buttons together -->
+        <legend>Choose one of these three items:</legend><!-- Legend is for describe the functionality of radio buttons-->
+        <input id="one" type="radio" name="items" value="one">
+        <label for="one">Choice One</label><br>
+        <input id="two" type="radio" name="items" value="two">
+        <label for="two">Choice Two</label>
+    </fieldset>
+</form>
+
+<input type="date">
+
+<!-- Formatting date for assistive devices(not visible) -->
+<p>Master Camper Cat officiated the cage match between Goro and Scorpion <time datetime="2013-02-13">last Wednesday</time>, which ended in a draw.</p>
+
+<button accesskey="b">Important Button</button><!-- shortcut with the given letter -->
+
+<div tabindex="0">I need keyboard focus!</div><!-- Can be focused with tab (-1 means it can be focused, but tab wont catch it) -->
+
+<style>
+    .sr-only {/* Content only visible to screen readers (display: none;/visibility: hidden; will hide from the reader too) */
+        position: absolute;
+        left: -10000px;
+        width: 1px; /* If 0px it removed from the content flow, so the screen readers will be ignore this */
+        height: 1px;
+        top: auto;
+        overflow: hidden;
+    }
+</style>
