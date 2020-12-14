@@ -1,0 +1,49 @@
+<style>
+    .grid-container {
+        display: grid; /* Turns the element to a grid container */
+        grid-template-columns: 100px 100px 100px; /* Adds some columns to the grid container */
+        grid-template-rows: 50px 50px; /* Adds some rows to the grid container. If there are less element then rows * columns, it will add an emtpy space */
+        grid-template-columns: repeat(100, 50px); /* Creates 100 columns, 50px width each */
+        grid-template-rows: repeat(100, 50px); /* Creates 100 rows, 50px height each */
+        grid-template-columns: 100px minmax(50px, 200px); /* Creates 2 columns 100px and (min 50px max 200px depends on the size of container) */
+        grid-template-rows: 100px minmax(50px, 200px); /* Creates 2 rows 100px and (min 50px max 200px depends on the size of container) */
+        grid-template-columns:repeat(auto-fill, minmax(60px, 1fr)); /* With auto fill, creates as many columns as possible depends on the size of container */
+        grid-template-rows:repeat(auto-fill, minmax(60px, 1fr)); /* With auto fill, creates as many rows as possible depends on the size of container */
+        grid-template-columns:repeat(auto-fit, minmax(60px, 1fr)); /* Same as auto-fill, but when the container is larger than the items together, it stretches the items, instead of adding empty columns */
+        grid-template-rows:repeat(auto-fit, minmax(60px, 1fr)); /* Same as auto-fill, but when the container is larger than the items together, it stretches the items, instead of adding empty rows */
+        /* Available units: fr(fraction of the container) auto(size of the conent) %(% of the container) px em...etc. */
+        grid-column-gap: 10px; /* Gap between grid columns */
+        grid-row-gap: 10px; /* Gap between grid rows */
+        grid-gap: 10px 20px; /* Gap between grid rows and columns. If there is only 1 value it will set both row and col */
+        justify-items: stretch; /* The contents fill the whole width of the cells. Default */
+        justify-items: start; /* Aligns the contents at the left of the cells */
+        justify-items: center; /* Aligns the contents at the center of the cells */
+        justify-items: end; /* Aligns the contents at the right of the cells */
+        align-items: stretch; /* The contents fill the whole height of the cells. Default */
+        align-items: start; /* Aligns the contents at the top of the cells */
+        align-items: center; /* Aligns the contents at the center of the cells */
+        align-items: end; /* Aligns the contents at the bottom of the cells */
+        grid-template-areas: /* Fully represents the grid table */
+            "header header header"
+            "advert content content"
+            "footer footer ."; /* . means empty cell */
+    }
+
+    .flex-item {
+        /* Grid lines are between rows or cols including the edges of the container => always 1 more line then row or col */
+        grid-column: 1 / 3; /* The item's column will start from line 1 and end in line 3 */
+        grid-row: 2 / 4; /* The item's row will start from line 2 and end in line 4 */
+        grid-column: 1 / span 2; /* The item's column will start from line 1 and the item is 2 block wide */
+        grid-row: span 2 / 4; /* The item is 2 block tall and it's end line at the line of 4 */
+        justify-self: stretch; /* The content fill the whole width of the cell. Default */
+        justify-self: start; /* Aligns the content at the left of the cell */
+        justify-self: center; /* Aligns the content at the center of the cell */
+        justify-self: end; /* Aligns the content at the right of the cell */
+        align-self: stretch; /* The content fill the whole height of the cell. Default */
+        align-self: start; /* Aligns the content at the top of the cell */
+        align-self: center; /* Aligns the content at the center of the cell */
+        align-self: end; /* Aligns the content at the bottom of the cell */
+        grid-area: header; /* The flex item will go to the given area (header row in this example) */
+        grid-area: 1/1/2/4; /* Creates area on the fly(Useful when there is no area in the container): horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at */
+    }
+</style>
