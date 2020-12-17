@@ -1,0 +1,109 @@
+<style>
+    body {
+        background-color: rgb(131, 142, 131);
+        color: rgb(201, 206, 189);
+    }
+
+    input[type=text],
+    input[type=number],
+    input[type=email],
+    select {
+        height: 30px;
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    button {
+        color: rgb(201, 206, 189);
+        background-color: rgb(100, 64, 62);
+        height: 30px;
+        border-radius: 4px;
+    }
+
+    .header-container,
+    #survey-form {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 768px;
+        margin: auto;
+        gap: 12px;
+        background-color: rgb(108, 96, 97);
+        padding: 16px;
+    }
+
+    .recommend-radio-buttons-container,
+    .improvement-checkboxes-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #comments {
+        width: 100%;
+    }
+</style>
+
+<div class="header-container">
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+</div>
+<div class="main container">
+    <form action="" id="survey-form">
+        <div>
+            <label id="name-label" for="name">Name</label><br>
+            <input id="name" type="text" placeholder="Enter your name" required>
+        </div>
+
+        <div>
+            <label id="email-label" for="email">Email</label><br>
+            <input id="email" type="email" placeholder="Enter your email address" required>
+        </div>
+
+        <div>
+            <label id="number-label" for="number">Age</label><br>
+            <input id="number" type="number" min="1" max="120" placeholder="Enter your age (Optional)">
+        </div>
+
+        <div>
+            <label for="dropdown">Which option best describes your current role?</label><br>
+            <select name="roles" id="dropdown">
+                <option value="student">Student</option>
+                <option value="full-time-job">Full Time Job</option>
+                <option value="full-time-learner">Full Time Learner</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="recommend-radio-buttons-container">Would you recommend freeCodeCamp to a friend?
+            <div>
+                <input id="recommend-yes" type="radio" name="recommend" value="yes" checked>Yes
+                <label for="recommend-yes"></label>
+            </div>
+            <div>
+                <input id="recommend-no" type="radio" name="recommend" value="no">No
+                <label for="recommend-no"></label>
+            </div>
+        </div>
+
+        <div class="improvement-checkboxes-container">What would you like to see improved? (Check all that apply)
+            <div>
+                <input type="checkbox" id="front-end" name="improvement-checkboxes" value="front-end">
+                <label for="front-end">Front-end Projects</label>
+            </div>
+            <div>
+                <input type="checkbox" id="back-end" name="improvement-checkboxes" value="back-end">
+                <label for="back-end">Back-end Projects</label>
+            </div>
+            <div>
+                <input type="checkbox" id="data-visualization" name="improvement-checkboxes" value="data-visualization">
+                <label for="data-visualization">Data Visualization</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="comments">Any comments or suggestions?</label>
+            <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+        </div>
+
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</div>
