@@ -1,0 +1,110 @@
+<style>
+    body {
+        color: #ffc914;
+        background-color: #76b041;
+        margin: 0;
+    }
+
+    #header {
+        display: flex;
+        background-color: #2e282a;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        z-index: 1;
+    }
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #nav-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-link {
+        color: #ffc914;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    #main-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 768px;
+        margin: auto;
+        margin-top: 76px;
+        text-align: center;
+    }
+
+    #video {
+        width: 100%;
+    }
+
+    #email {
+        width: 100%;
+        height: 32px;
+        border-radius: 4px;
+    }
+
+    #submit {
+        background-color: #17bebb;
+        color: #ffc914;
+        border-radius: 4px;
+        width: 100px;
+        height: 32px;
+        margin-top: 16px;
+    }
+
+    #about {
+        margin-bottom: 16px;
+    }
+
+    @media (min-width: 768px) {
+        
+    }
+</style>
+
+<header id="header">
+    <img src="https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png" alt="header-image" id="header-img">
+    <nav id="nav-bar">
+        <div></div>
+        <a href="#video-container" class="nav-link">Video</a>
+        <a href="#form-container" class="nav-link">Form</a>
+        <a href="#about" class="nav-link">About</a>
+    </nav>
+</header>
+<div id="main-container">
+    <div id="1"></div>
+    <div id="video-container">
+        <video controls id="video">
+            <source src="mov_bbb.mp4" type="video/mp4">
+            <source src="mov_bbb.ogg" type="video/ogg">
+            Your browser does not support HTML video.
+        </video>
+        
+        <p>
+            Video courtesy of
+            <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.
+        </p>
+    </div>
+    <div id="form-container">
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+            <input type="email" id="email" placeholder="email" name="email">
+            <input type="submit" id="submit">
+        </form>
+    </div>
+    <div id="about">
+        <span>This is just a test page, nothing serious.</span>
+    </div>
+</div>
