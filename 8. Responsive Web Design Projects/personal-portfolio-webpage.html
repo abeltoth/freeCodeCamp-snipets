@@ -1,0 +1,87 @@
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        background-color: #372248;
+        color: #ffa62b;
+        margin: 0;
+        font-size: 18px;
+        font-family: 'Indie Flower', cursive;
+    }
+
+    a {
+        color: #ffa62b;
+        text-decoration: none;
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background-color: #ffa62b;
+        color: #372248;
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #navbar a {
+        color: #372248;
+    }
+
+    #welcome-section {
+        height: 100vh;
+        margin: auto;
+        margin-top: 50px;
+        background: radial-gradient(#372248 5%, #ffa62b 25%, #372248 60%);
+    }
+
+    .project-tile {
+        width: 20vw;
+        height: 20vw;
+        border: 1px solid;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width: 768px) {
+        #navbar {
+            grid-template-columns: auto 1fr 1fr 1fr;
+        }
+    }
+</style>
+
+<nav id="navbar">
+    <span class="spacer"></span>
+    <a href="#welcome-section" class="nav-link">Welcome</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#profile" class="nav-link">Profile</a>
+</nav>
+
+<section id="welcome-section">
+    <h1>My Portfolio</h1>
+    <h2>Here is the welcome section. Its not beautiful, but mandatory for now. I hope no one will see this "beautiful" page.</h2>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <h3>Technical documentation</h3>
+    <div class="project-tile">
+        <a href="https://codepen.io/abeltoth/pen/poEwwjz">Link here</a>
+    </div>
+</section>
+
+<section id="profile">
+    <h2>Profile</h2>
+    <a href="https://www.freecodecamp.org/fcc746e2010" id="profile-link" target="_blank">Link here</a>
+</section>
