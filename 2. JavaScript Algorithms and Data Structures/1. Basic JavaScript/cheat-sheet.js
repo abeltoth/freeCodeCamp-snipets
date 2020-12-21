@@ -11,29 +11,21 @@ var ourName = 'Sanyi'; // Not contain space or start with number
 ME != me
 
 /* operators */
-+
--
-/
-*
-% /* Not works with negative numbers */
-++
---
-+=
--=
-*=
-/=
+// +, -, /, *, %, ++, --, +=, -=, *=, /=,
+
+/* Not works with negative numbers */
 
 /* Escape character: \ */
 "asd \"das\" da "
 
-\'	single quote
-\"	double quote
-\\	backslash
-\n	newline
-\r	carriage return
-\t	tab
-\b	word boundary
-\f	form feed
+// \'	single quote
+// \"	double quote
+// \\	backslash
+// \n	newline
+// \r	carriage return
+// \t	tab
+// \b	word boundary
+// \f	form feed
 
 /* Strings are immutable */
 "test".length // returns 4
