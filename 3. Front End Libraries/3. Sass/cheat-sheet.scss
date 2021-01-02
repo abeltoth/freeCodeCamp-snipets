@@ -1,0 +1,101 @@
+// Variables
+$headings-color: green;
+h1 {
+    color: $headings-color;
+}
+
+
+// Nesting css rules
+nav {
+    background-color: red;
+
+    ul {
+        list-style: none;
+
+        li {
+            display: inline-block;
+        }
+    }
+}
+
+
+// Mixins
+@mixin box-shadow($x, $y, $blur, $c) { // Like functions in css, we can make reusable code
+    -webkit-box-shadow: $x $y $blur $c; // Good for example multiple browser support
+    -moz-box-shadow: $x $y $blur $c;
+    -ms-box-shadow: $x $y $blur $c;
+    box-shadow: $x $y $blur $c;
+}
+div {
+    @include box-shadow(0px, 0px, 4px, #fff); // Called with @include
+}
+
+
+// Conditionals
+@mixin text-effect($val) {
+    @if $val == danger {
+        color: red;
+    }
+    @else if $val == alert {
+        color: yellow;
+    }
+    @else if $val == success {
+        color: green;
+    }
+    @else {
+        color: black;
+    }
+}
+
+
+// For
+@for $i from 1 through 12 {
+    .col-#{$i} { width: 100%/12 * $i; }
+}
+// It generates the following:
+.col-1 {
+    width: 8.33333%;
+}
+.col-2 {
+    width: 16.66667%;
+}
+// ...
+.col-12 {
+    width: 100%;
+}
+
+
+// Each
+@each $color in blue, red, green { // Iterates through all the given values
+    .#{$color}-text {color: $color;}
+}
+// Iterate through objects:
+$colors: (color1: blue, color2: red, color3: green);
+@each $key, $color in $colors {
+    .#{$color}-text {color: $color;}
+}
+
+
+// While
+$x: 1;
+@while $x < 13 {
+    .col-#{$x} { width: 100%/12 * $x;}
+    $x: $x + 1;
+}
+
+
+// Partials
+@import 'mixins'; // Imports _mixins.scss partial
+
+
+// Extend
+.panel{
+    background-color: red;
+    height: 70px;
+    border: 2px solid green;
+}
+.big-panel{
+    @extend .panel; // Extends an existing rule with another rules
+    width: 150px;
+    font-size: 2em;
+}
